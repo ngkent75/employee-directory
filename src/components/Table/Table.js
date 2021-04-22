@@ -37,6 +37,12 @@ const EmTable = ({filter}) => {
         }
     };
 
+    if(sortName === 'ascend') {
+        employees = employees.sort((a, b)=>a.name.first > b.name.first ? 1 : -1)
+    } else {
+        employees = employees.sort((a, b)=>a.name.first > b.name.first ? -1 : 1)
+    }
+
     
 
     return (
